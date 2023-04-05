@@ -8,6 +8,7 @@ require('dotenv').config()
 app.set ("view engine", "ejs"); 
 app.use(bodyParser.urlencoded({extended: true})); 
 app.use(express.static("public")); 
+mongoose.set('strictQuery', true);
  
 mongoose.connect("process.env.MONGO_URI" , {useNewUrlParser: true});
  
